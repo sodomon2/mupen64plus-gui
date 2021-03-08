@@ -19,7 +19,7 @@ function create_submenu(depth)
 			submenu = create_submenu(depth - 1, true),
 			on_button_press_event = function ()
 				-- @TODO: esto se puede mejorar
-				os.execute('mupen64plus ' .. rom)
+                os.execute("mupen64plus ".. rom .."  &")
 				ui.statusbar:push(0, tostring(filename):gsub("\\ ", " "))
 			end
 		}

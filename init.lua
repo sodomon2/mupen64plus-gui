@@ -1,4 +1,4 @@
-#!/usr/bin/lua5.1
+#!/usr/bin/lua5.2
 
 require 'lib.middleclass'
 json       = require 'lib.json'

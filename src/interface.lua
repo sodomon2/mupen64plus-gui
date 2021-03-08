@@ -25,9 +25,9 @@ end
 
 function ui.btn_chooser_rom_open:on_clicked()
     roms = ui.chooser_rom:get_filename(chooser):gsub(" ", "\\ ")
+    os.execute("mupen64plus ".. roms .."  &")
 	table.insert(conf.history.recents, roms)
 	config:save('mupen64plus.json', conf)
-    os.execute('mupen64plus ' .. roms )
     ui.chooser_rom:hide()
 end
 
